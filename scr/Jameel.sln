@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jameel.EntityFrameworkCore", "back-end\Jameel.EntityFrameworkCore\Jameel.EntityFrameworkCore.csproj", "{B50A80DA-A5D4-43C2-955A-D2A296EAA37D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jameel.Core", "back-end\Jameel.Core\Jameel.Core.csproj", "{0389D35C-442C-46C4-831C-EC99F5B37204}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jameel.Scheduler", "back-end\Jameel.Scheduler\Jameel.Scheduler.csproj", "{50132DD5-B06B-4F29-97C7-1326DC79A002}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jameel.Service", "back-end\Jameel.Service\Jameel.Service.csproj", "{AD79D0BE-51E8-4805-AAC1-B688F0676E46}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jameel.Ioc", "back-end\Jameel.Ioc\Jameel.Ioc.csproj", "{ED495DD0-88A2-4893-813F-F0A7D6C34873}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Jameel.Host", "back-end\Jameel.Host\Jameel.Host.csproj", "{A8750CA1-F5AC-4106-9B59-B9318588653A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B50A80DA-A5D4-43C2-955A-D2A296EAA37D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B50A80DA-A5D4-43C2-955A-D2A296EAA37D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B50A80DA-A5D4-43C2-955A-D2A296EAA37D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B50A80DA-A5D4-43C2-955A-D2A296EAA37D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0389D35C-442C-46C4-831C-EC99F5B37204}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0389D35C-442C-46C4-831C-EC99F5B37204}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0389D35C-442C-46C4-831C-EC99F5B37204}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0389D35C-442C-46C4-831C-EC99F5B37204}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50132DD5-B06B-4F29-97C7-1326DC79A002}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50132DD5-B06B-4F29-97C7-1326DC79A002}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50132DD5-B06B-4F29-97C7-1326DC79A002}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50132DD5-B06B-4F29-97C7-1326DC79A002}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AD79D0BE-51E8-4805-AAC1-B688F0676E46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AD79D0BE-51E8-4805-AAC1-B688F0676E46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AD79D0BE-51E8-4805-AAC1-B688F0676E46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AD79D0BE-51E8-4805-AAC1-B688F0676E46}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ED495DD0-88A2-4893-813F-F0A7D6C34873}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ED495DD0-88A2-4893-813F-F0A7D6C34873}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ED495DD0-88A2-4893-813F-F0A7D6C34873}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ED495DD0-88A2-4893-813F-F0A7D6C34873}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A8750CA1-F5AC-4106-9B59-B9318588653A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A8750CA1-F5AC-4106-9B59-B9318588653A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A8750CA1-F5AC-4106-9B59-B9318588653A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A8750CA1-F5AC-4106-9B59-B9318588653A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6D229957-156B-411A-9C20-ED23313A4C9A}
+	EndGlobalSection
+EndGlobal

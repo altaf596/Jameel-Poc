@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Hangfire" Version="1.8.5" />
+    <PackageReference Include="Hangfire.Core" Version="1.8.5" />
+    <PackageReference Include="Hangfire.SqlServer" Version="1.8.5" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Client" Version="7.0.11" />
+    <PackageReference Include="Microsoft.AspNetCore.SignalR.Common" Version="7.0.11" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Jameel.Core\Jameel.Core.csproj" />
+  </ItemGroup>
+
+  
+
+</Project>

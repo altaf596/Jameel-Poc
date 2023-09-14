@@ -1,0 +1,49 @@
+<!-- Image and text -->
+<nav class="navbar bg-primary fixed-top" data-bs-theme="dark">
+  <div class="container">
+    <a class="navbar-brand" routerLink="/">
+
+      SignalR | Hangfire - POC
+    </a>
+  </div>
+</nav>
+<div class="py-4"></div>
+<div class="page-holder">
+  <router-outlet></router-outlet>
+</div>
+
+<footer class="">
+  
+
+  <div class="section section-two bg-dark text-white">
+    <div class="container">
+
+      <div class="d-flex  pt-3">
+        <div class="p-2 fs-6">
+
+          <p class="text-light-gray">
+            Copyright © 2023 SignalR | Hangfire - POC. All Rights Reserved
+          </p>
+
+        </div>
+        <div class="ms-auto p-2">
+
+          <p class="mb-4 mb-md-0 ">
+            <a class="link text-white " href="javascript:void(0);" [routerLink]="'/'">Privacy Policy </a>
+            <span class="mx-2 d-none d-md-inline text-light-gray"> | </span>
+            <a class="link text-white " href="javascript:void(0);" [routerLink]="'/'">Terms of Use </a>
+
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+</footer>
+
+<p-toast position="bottom-right" key="onApp"></p-toast>

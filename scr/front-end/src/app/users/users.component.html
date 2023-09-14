@@ -1,0 +1,48 @@
+<div class="container-fluid  py-5">
+
+    <div class="container bg-white rounded pb-5 px-5 pt-3">
+
+        <div class="d-flex mb-3 pt-3 pb-2">
+            <div class="fs-5">Users</div>
+            <div class="ms-auto"><p-button routerLink="/user/add" label="Add User"
+                    styleClass="p-button-raised px-4"></p-button></div>
+        </div>
+
+
+        <div *ngIf="users && users.length > 0">
+
+            <p-table [value]="users" styleClass="p-datatable-striped" [tableStyle]="{'min-width': '50rem'}">
+                <ng-template pTemplate="header">
+                    <tr>
+                        <th>Id</th>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>DOB</th>
+                        <th>Phoen Number</th>
+                        <th>Address</th>
+                        <th>Action</th>
+                    </tr>
+                </ng-template>
+                <ng-template pTemplate="body" let-user>
+                    <tr>
+                        <td>{{user.id}}</td>
+                        <td>{{user.firstName}}</td>
+                        <td>{{user.lastName}}</td>
+                        <td>{{user.dob | date: 'dd/MM/yyyy'}}</td>
+                        <td>{{user.phoneNumber}}</td>
+                        <td>{{user.address}}</td>
+                        <td><p-button (click)="confirm($event, user.id)" icon="pi pi-trash" styleClass="p-button-danger"></p-button></td>
+                    </tr>
+                </ng-template>
+            </p-table>
+
+        </div>
+
+        <div class="text-center" *ngIf="!(users && users.length > 0)">
+            No users exists
+        </div>
+
+    </div>
+</div>
+
+<p-confirmPopup></p-confirmPopup> 
