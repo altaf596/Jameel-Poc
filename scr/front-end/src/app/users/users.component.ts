@@ -67,13 +67,15 @@ export class UsersComponent implements OnInit, OnDestroy {
         message: 'Are you sure that you want to proceed?',
         icon: 'pi pi-exclamation-triangle',
         accept: () => {
-            this._messageService.add({ key: 'onApp', severity: 'info', summary: 'Confirmed', detail: 'Deleting user is in progress' });
-            setTimeout(() => {
-              this.deleteUser(userId);
-            }, 300);
+           // this._messageService.add({ key: 'onApp', severity: 'info', summary: 'Confirmed', detail: 'Deleting user is in progress' });
+            // setTimeout(() => {
+            //   this.deleteUser(userId);
+            // }, 300);
+
+            this.deleteUser(userId);
         },
         reject: () => {
-          this._messageService.add({ key: 'onApp', severity: 'error', summary: 'Error', detail: 'You have rejected'});
+          //this._messageService.add({ key: 'onApp', severity: 'error', summary: 'Error', detail: 'You have rejected'});
         }
     });
 }
