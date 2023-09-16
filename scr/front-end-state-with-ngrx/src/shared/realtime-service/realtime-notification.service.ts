@@ -4,7 +4,7 @@ import { SignalRConnectionService } from './signalr-connection.service';
 import { UserStateService } from '../services/user.state.service';
 import { Store } from '@ngrx/store';
 import { AppState } from '../state/app.state';
-import { UserActions, addUser } from '../state/user/user.action';
+import { UserActions, addUser } from '../state/user/user.actions';
 import { IUser, User } from '../models/user-dto';
 
 @Injectable()

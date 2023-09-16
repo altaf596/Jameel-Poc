@@ -6,8 +6,8 @@ import { IUser } from 'src/shared/models/user-dto';
 import { UserManagementServiceProxy } from 'src/shared/service-proxies/user-management.service';
 import { UserStateService } from 'src/shared/services/user.state.service';
 import { AppState } from 'src/shared/state/app.state';
-import { getAllUsers as getAllUsersSelector } from 'src/shared/state/user/user.selector';
-import { deleteUser } from 'src/shared/state/user/user.action';
+import { getUsersSelector } from 'src/shared/state/user/user.selectors';
+import { deleteUser, loadUsers } from 'src/shared/state/user/user.actions';
 
 @Component({
   selector: 'app-users',
@@ -26,7 +26,8 @@ export class UsersComponent implements OnInit {
 
   }
   ngOnInit(): void {
-    this.users = this._appStore.select(getAllUsersSelector);   
+    this.users = this._appStore.select(getUsersSelector);
+    this._appStore.dispatch(loadUsers());  
   }
 
 
@@ -37,7 +38,6 @@ export class UsersComponent implements OnInit {
       message: 'Are you sure that you want to proceed?',
       icon: 'pi pi-exclamation-triangle',
       accept: () => {
-
         this.deleteUser(userId);
       }
     });

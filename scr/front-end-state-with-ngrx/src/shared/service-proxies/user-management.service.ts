@@ -2,7 +2,7 @@ import { Injectable, Inject, Optional } from '@angular/core';
 import { HttpClient, HttpErrorResponse, HttpHeaders } from '@angular/common/http';
 import { API_BASE_URL, BaseService } from './base.service';
 import { Observable, catchError, map, of, throwError } from 'rxjs';
-import { User } from '../models/user-dto';
+import { IUser, User } from '../models/user-dto';
 import { CreateUserInputDto } from '../models/create-user-input-dto';
 
 @Injectable()
@@ -33,7 +33,7 @@ export class UserManagementServiceProxy extends BaseService {
         });
 
         return this.http.get<any>(this.baseUrl + '/api/User/GetAll', { headers: _headers })
-            .pipe(map(result => {
+            .pipe(map((result: any) => {
                 return result;
             }), catchError((err: HttpErrorResponse) => {
                 return throwError(() => err);

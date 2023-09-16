@@ -25,6 +25,9 @@ import { ConfirmationService, MessageService } from 'primeng/api';
 import { ConfirmPopupModule } from 'primeng/confirmpopup';
 import { StoreModule } from '@ngrx/store'; 
 import { appReducer } from 'src/shared/state/app.state';
+import { EffectsModule } from '@ngrx/effects';
+import { UserEffects } from 'src/shared/state/user/user.effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 
 @NgModule({
   declarations: [
@@ -47,7 +50,9 @@ import { appReducer } from 'src/shared/state/app.state';
     CalendarModule,
     ToastModule,
     ConfirmPopupModule,
-    StoreModule.forRoot(appReducer)
+    StoreModule.forRoot(appReducer),
+    EffectsModule.forRoot([UserEffects])
+
   ],
   providers: [
     SignalRConnectionService,
