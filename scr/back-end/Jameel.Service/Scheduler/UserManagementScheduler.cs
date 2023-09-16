@@ -29,7 +29,8 @@ namespace Jameel.Service.Scheduler
 
         public void ScheduleToSaveUser(User user)
         {           
-            BackgroundJob.Schedule(() => this.AddUserAndNotify(user), TimeSpan.FromMinutes(this._configuration.GetValue<int>("Hangfire:AddUserDelayTimeInMinute")) );
+            //BackgroundJob.Schedule(() => this.AddUserAndNotify(user), TimeSpan.FromMinutes(this._configuration.GetValue<int>("Hangfire:AddUserDelayTimeInMinute")) );
+            BackgroundJob.Schedule(() => this.AddUserAndNotify(user), TimeSpan.FromSeconds(this._configuration.GetValue<int>("Hangfire:AddUserDelayTimeInMinute")) );
         }
 
 
