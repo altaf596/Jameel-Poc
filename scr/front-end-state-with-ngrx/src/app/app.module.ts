@@ -51,7 +51,12 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
     ToastModule,
     ConfirmPopupModule,
     StoreModule.forRoot(appReducer),
-    EffectsModule.forRoot([UserEffects])
+    EffectsModule.forRoot([UserEffects]), 
+
+    StoreDevtoolsModule.instrument({
+      maxAge: 25, // Retains last 25 states
+      logOnly: false, // Restrict extension to log-only mode
+    }),
 
   ],
   providers: [

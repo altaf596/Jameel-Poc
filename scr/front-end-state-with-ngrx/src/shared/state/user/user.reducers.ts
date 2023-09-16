@@ -5,12 +5,12 @@ import { addUser, deleteUser, loadUsersSuccess } from "./user.actions";
 //create user reducers
 const _userReducer = createReducer(userInitialState,
 
-    on(loadUsersSuccess, (state, action) =>{
+    on(loadUsersSuccess, (state, action) => {
         return {
             ...state, users: [...state.users, ...action.users],
-        };       
+        };
     }),
-       
+
     on(addUser, (state, action) => {
         return {
             ...state, users: [...state.users, action.user],
@@ -23,6 +23,7 @@ const _userReducer = createReducer(userInitialState,
             ...state, users: updatedUsers
         }
     })
+    
 );
 
 export function UserReducer(state: any, action: any) {

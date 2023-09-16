@@ -1,11 +1,12 @@
 import { Injectable } from "@angular/core";
 import { UserManagementServiceProxy } from "src/shared/service-proxies/user-management.service";
 import { Actions, concatLatestFrom, createEffect, ofType } from "@ngrx/effects"
-import { dummyAction, loadUsers, loadUsersSuccess } from "./user.actions";
-import { map, mergeMap, of, withLatestFrom } from "rxjs";
+import { deleteUser, dummyAction, loadUsers, loadUsersSuccess } from "./user.actions";
+import { map, mergeMap, of, switchMap } from "rxjs";
 import { Store } from "@ngrx/store";
 import { AppState } from "../app.state";
 import { getUsersSelector } from "./user.selectors";
+import { Action } from "rxjs/internal/scheduler/Action";
 
 
 @Injectable()
@@ -21,11 +22,8 @@ export class UserEffects {
     getUsersEffects$ = createEffect(() => {
         return this.actions$.pipe(
             ofType(loadUsers),
-            //concatLatestFrom
             concatLatestFrom(() => this._appStore.select(getUsersSelector)),
             mergeMap(([action, users]) => {
-
-                console.log("users:", users);
 
                 if (!users.length || users.length === 1) {
 
@@ -49,4 +47,21 @@ export class UserEffects {
         );
 
     });
+
+
+    deleteUserEffects$ = createEffect(() => {
+        return this.actions$.pipe(
+            ofType(deleteUser),
+            switchMap((action) => {
+                console.log('action', action);
+                return this._userManagementServiceProxy.deleteUser(0).pipe(
+                    map((data) => {
+                        return deleteUser({ id: 0 });
+                    })
+                )
+            })
+        )
+
+    })
+
 }
